@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Private Events & Holiday Parties in Wynwood — Mayami Wynwood</title>
+<meta name="description" content="Private events at Mayami Wynwood for 8 to 800 guests: holiday parties, corporate dinners, birthdays and full buyouts. Prix fixe menus from $50, open bars, fire shows. Price your event all-in in 30 seconds." />
+<meta name="theme-color" content="#120c08" />
+<meta property="og:title" content="Private Events at Mayami Wynwood" />
+<meta property="og:description" content="Dinner that turns into the party. Price your event all-in, in 30 seconds." />
+<meta property="og:image" content="/images/hero.webp" />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,500&family=Manrope:wght@300;400;500;600;700&family=Marcellus&display=swap" rel="stylesheet" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="preload" as="image" href="/images/hero.webp" imagesrcset="/images/hero-800.webp 800w, /images/hero.webp 2200w" imagesizes="100vw" />
+<link rel="stylesheet" href="/src/style.css" />
+
+<!-- META PIXEL / GA4: paste the base codes here. main.js fires `Lead` on a
+     successful inquiry and `InitiateCheckout` when a quote is carried into the form. -->
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="ribbon" role="note">
+  <span class="ribbon__dot" aria-hidden="true"></span>
+  <span id="ribbonText"><b>Holiday 2026:</b> <span id="weeksLeft">—</span> weeks to peak December — prime Thursday–Saturday dates are going now.</span>
+  <a href="#quote">Price your date →</a>
+</div>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="nav__in">
+    <a href="#top" class="nav__brand" aria-label="Mayami Wynwood private events — back to top">
+      <img src="/images/logo.png" alt="" width="520" height="326" />
+      <span>Private Events</span>
+    </a>
+    <div class="nav__links">
+      <a href="#quote">Instant quote</a>
+      <a href="#spaces">Spaces</a>
+      <a href="#menus">Menus</a>
+      <a href="#buyouts">Buyouts</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="#inquire" class="nav__cta">Hold a date</a>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+<header class="hero" id="top">
+  <img class="hero__img" src="/images/hero.webp" srcset="/images/hero-800.webp 800w, /images/hero.webp 2200w" sizes="100vw" alt="A packed night at Mayami Wynwood: chandeliers, haze and a crowd dancing in the open-air courtyard" fetchpriority="high" />
+  <div class="hero__scrim" aria-hidden="true"></div>
+  <canvas class="hero__embers" id="embers" aria-hidden="true"></canvas>
+  <div class="wrap hero__body">
+    <p class="eyebrow">Private events & group bookings · Wynwood, Miami</p>
+    <h1>Dinner that turns into <em>the party.</em></h1>
+    <p class="lead">Six spaces, a chef-driven Mexican-Mediterranean menu, and fire shows on Friday and Saturday nights. Price your event all-in right here — menu, bar, service and tax — and a real person sends your proposal within <span data-promise="responseTime">2 hours</span>.</p>
+    <div class="hero__cta">
+      <a href="#quote" class="btn">Get my all-in quote</a>
+      <a href="#spaces" class="btn btn--ghost">See the spaces</a>
+    </div>
+    <dl class="hero__meta">
+      <div><dt>Guests</dt><dd>8–800</dd></div>
+      <div><dt>Event spaces</dt><dd>6</dd></div>
+      <div><dt>Menus from</dt><dd>$50</dd></div>
+      <div><dt>Square feet</dt><dd>8,500</dd></div>
+    </dl>
+  </div>
+</header>
+
+<!-- ═══════════════════════ INSTANT QUOTE ═══════════════════════ -->
+<section class="sec sec--quote" id="quote" aria-labelledby="quote-h">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="eyebrow">Your all-in quote</p>
+      <h2 id="quote-h">The real number, <em>before you email anyone.</em></h2>
+      <p>Choose the shape of your night. The service charge and tax are already in the total, so the number you see is the number you'll sign.</p>
+    </div>
+
+    <div class="builder reveal">
+      <div class="builder__controls">
+        <fieldset class="step">
+          <legend class="step__label"><span>01 · The occasion</span><b id="lblOcc"></b></legend>
+          <div class="seg" id="segOcc" data-key="occ"></div>
+        </fieldset>
+
+        <div class="step">
+          <label class="step__label" for="rGuests"><span>02 · The headcount</span><b><output id="lblGuests" for="rGuests">40</output> guests</b></label>
+          <input type="range" id="rGuests" min="8" max="400" step="2" value="40" />
+          <div class="range-ends" aria-hidden="true"><span>8</span><span>400+</span></div>
+          <div class="seg seg--sm" id="segFmt" data-key="fmt" role="group" aria-label="Format">
+            <button type="button" data-val="seated">Seated dinner</button>
+            <button type="button" data-val="standing">Cocktail-style</button>
+          </div>
+        </div>
+
+        <fieldset class="step">
+          <legend class="step__label"><span>03 · The night</span><b id="lblNight"></b></legend>
+          <div class="seg" id="segNight" data-key="night"></div>
+          <p class="step__hint" id="nightHint"></p>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend class="step__label"><span>04 · The food</span><b id="lblFood"></b></legend>
+          <div class="seg seg--cards" id="segFood" data-key="food"></div>
+          <p class="step__hint" id="foodHint"></p>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend class="step__label"><span>05 · The bar</span><b id="lblBar"></b></legend>
+          <div class="seg" id="segBar" data-key="bar"></div>
+          <div class="seg seg--sm" id="segHours" data-key="hours" role="group" aria-label="Open bar hours"></div>
+          <p class="step__hint" id="barHint"></p>
+        </fieldset>
+
+        <fieldset class="step">
+          <legend class="step__label"><span>06 · Extras</span><b>Optional</b></legend>
+          <div class="seg" id="segExtra" data-key="extras" data-multi></div>
+        </fieldset>
+      </div>
+
+      <aside class="quote" aria-live="polite" aria-labelledby="qTotalLabel">
+        <div class="quote__img">
+          <img id="qImg" alt="" src="/images/vip-800.webp" width="800" height="533" />
+          <div class="quote__room"><span id="qRoomEyebrow">Your space</span><strong id="qRoom">—</strong></div>
+        </div>
+        <div class="quote__body">
+          <p class="quote__label" id="qTotalLabel">Your all-in estimate</p>
+          <p class="quote__total" id="qTotal">$0</p>
+          <p class="quote__per" id="qPer">—</p>
+          <dl class="quote__lines" id="qLines"></dl>
+          <p class="quote__min" id="qMin"></p>
+          <button type="button" class="btn btn--block" id="holdBtn">Hold this date</button>
+          <p class="quote__fine">Includes the <span data-pricing="serviceCharge">20%</span> service charge and <span data-pricing="taxRate">8%</span> tax. A named events captain confirms within <span data-promise="responseTime">2 hours</span>.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ SPACES ═══════════════════════════ -->
+<section class="sec" id="spaces" aria-labelledby="spaces-h">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">The spaces</p>
+      <h2 id="spaces-h">Six ways to take over <em>Mayami.</em></h2>
+      <p>From a private table under the tree to the whole 8,500-square-foot venue. Each card shows what the space is booked for and how many it holds, seated and cocktail-style. As you build your quote, the spaces that fit light up.</p>
+    </div>
+    <p class="spaces__note" id="spacesNote" aria-live="polite"></p>
+    <div class="spaces" id="spaceGrid"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ MENUS ═══════════════════════════ -->
+<section class="sec sec--alt" id="menus" aria-labelledby="menus-h">
+  <div class="wrap">
+    <div class="menus-head reveal">
+      <figure class="chef"><img loading="lazy" src="/images/chef-800.webp" alt="Chef Johnnatan Arenas in his whites" width="606" height="566" /><figcaption>Chef Johnnatan Arenas</figcaption></figure>
+    <div class="head">
+      <p class="eyebrow">The menus</p>
+      <h2 id="menus-h">Three courses, <em>priced on the page.</em></h2>
+      <p>Chef Johnnatan Arenas brings more than 20 years in world-class kitchens to a menu that fuses Mexican, Mediterranean and Asian flavors. Every menu is three courses, with vegetarian options on request.</p>
+    </div>
+    </div>
+    <div class="pkgs reveal" id="menuGrid"></div>
+    <div class="menus-alt reveal" id="menuAlt"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ BUYOUTS ═══════════════════════════ -->
+<section class="sec" id="buyouts" aria-labelledby="buyouts-h">
+  <div class="wrap">
+    <div class="buyouts">
+      <div class="buyouts__intro reveal">
+        <p class="eyebrow">Partial & full buyouts</p>
+        <h2 id="buyouts-h">Take the courtyard. <em>Or the whole place.</em></h2>
+        <p>Book the Outdoor Area (up to 120 seated, 350 cocktail-style) or the full venue (280 seated, 800 cocktail-style), and you unlock passed hors d'oeuvres and hourly open bars.</p>
+        <figure class="buyouts__img"><img loading="lazy" src="/images/lounge.webp" srcset="/images/lounge-800.webp 800w, /images/lounge.webp 1600w" sizes="(max-width: 900px) 100vw, 40vw" alt="Mayami's lounge: white banquettes, woven lanterns and lit palms" /></figure>
+      </div>
+      <div class="buyouts__grid reveal" id="buyoutGrid"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ THE NIGHT ═══════════════════════════ -->
+<section class="sec sec--alt" id="night" aria-labelledby="night-h">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="eyebrow">The night, scripted</p>
+      <h2 id="night-h">Four moments your guests <em>will still be posting.</em></h2>
+      <p>A great event isn't a long dinner. It's a short story. Your captain runs these beats so you get to be a guest at your own party.</p>
+    </div>
+    <ol class="beats">
+      <li class="beat reveal">
+        <figure><img loading="lazy" src="/images/facade-800.webp" alt="Mayami's arched entrance on NW 23rd Street" width="800" height="533" /></figure>
+        <p class="beat__n">01 · Arrival</p>
+        <h3>The welcome</h3>
+        <p>Your group is greeted by name at 127 NW 23rd and walked straight to your space. No waiting at the host stand.</p>
+      </li>
+      <li class="beat reveal">
+        <figure><img loading="lazy" src="/images/groupdine-800.webp" alt="A long table of guests at dinner on the Terrace" width="800" height="450" /></figure>
+        <p class="beat__n">02 · Dinner</p>
+        <h3>The table</h3>
+        <p>Three courses from the chef's prix fixe, from ceviche to ribeye to churros with cajeta. Nobody has to wrangle a group order.</p>
+      </li>
+      <li class="beat reveal">
+        <figure><img loading="lazy" src="/images/fire-800.webp" alt="A fire dancer performing with flaming fans" width="800" height="1067" /></figure>
+        <p class="beat__n">03 · Peak</p>
+        <h3>The show</h3>
+        <p>On Friday and Saturday nights the performances start after 9PM. Lights drop, and the fire dancers take the floor.</p>
+      </li>
+      <li class="beat reveal">
+        <figure><img loading="lazy" src="/images/parade-800.webp" alt="Servers carrying bottles with sparklers and a light-up sign" width="800" height="533" /></figure>
+        <p class="beat__n">04 · Late</p>
+        <h3>The bottle parade</h3>
+        <p>Stay past 10PM and the bottles come out with sparklers (always included with bottle service), and dinner becomes the dance floor.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ PROMISES ═══════════════════════════ -->
+<section class="sec" id="promise" aria-labelledby="promise-h">
+  <div class="wrap promise">
+    <div class="head reveal">
+      <p class="eyebrow">Our promise to planners</p>
+      <h2 id="promise-h">Booking a group <em>shouldn't be work.</em></h2>
+      <p>If you're planning this for your team or your best friend, you're probably comparing three venues on a deadline. Here's what you get from us, in writing.</p>
+    </div>
+    <ol class="rights reveal">
+      <li><h3>A complete proposal within <span data-promise="responseTime">2 hours</span></h3><p>During business hours. Not "let's hop on a call." You get the menu, the space and the all-in price.</p></li>
+      <li><h3>The all-in price, first</h3><p>The 20% service charge and 8% tax are in every number we show you. No surprise line items.</p></li>
+      <li><h3>One captain, start to finish</h3><p>You get a name and a direct line. You'll never re-explain your party to a second person.</p></li>
+      <li><h3>Dietary needs, handled</h3><p>Gluten-free, vegan, dairy-free, allergies: flag it once on the form and it's confirmed on the menu.</p></li>
+      <li><h3>A headcount that works for you</h3><p>Lock your final count three business days out. If it goes up, we'll make room where the space allows.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ GALLERY + PROOF ═══════════════════════════ -->
+<section class="sec sec--alt" id="gallery" aria-labelledby="gallery-h">
+  <div class="wrap">
+    <div class="head head--center reveal">
+      <p class="eyebrow">Otra noche en Mayami</p>
+      <h2 id="gallery-h">A few frames <em>from the fire.</em></h2>
+    </div>
+    <div class="gal reveal">
+      <figure class="gal--wide gal--tall"><img loading="lazy" src="/images/birthday.webp" srcset="/images/birthday-800.webp 800w, /images/birthday.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="A birthday group celebrating with gold number balloons" /></figure>
+      <figure><img loading="lazy" src="/images/pasta-800.webp" alt="A guest twirling pasta with a cocktail at her side" /></figure>
+      <figure><img loading="lazy" src="/images/bar-800.webp" alt="The terracotta bar under woven lanterns" /></figure>
+      <figure class="gal--wide"><img loading="lazy" src="/images/sushi.webp" srcset="/images/sushi-800.webp 800w, /images/sushi.webp 1600w" sizes="(max-width: 760px) 100vw, 50vw" alt="Friends reaching into a platter of sushi and sashimi with chopsticks" /></figure>
+    </div>
+    <div class="proof reveal">
+      <p class="proof__award">Best of Miami<sup>®</sup> 2025 winner · Voted Best Ladies Night in Miami</p>
+      <p class="proof__press"><span>As seen in</span> Eater Miami · Time Out · Local 10 · Secret Miami · OpenTable</p>
+      <!-- TODO(client): add one real planner testimonial here (name, company, event). -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ FAQ ═══════════════════════════ -->
+<section class="sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap faq">
+    <div class="head reveal">
+      <p class="eyebrow">Good to know</p>
+      <h2 id="faq-h">The questions <em>planners ask.</em></h2>
+      <p>Anything else? Call <a data-venue="phone" href="tel:+17866601341">(786) 660-1341</a>.</p>
+    </div>
+    <div class="faq__list reveal">
+      <details>
+        <summary>What's the deal with service fees?</summary>
+        <p>There's a 20% service charge and 8% sales tax. Both are already in your quote above.</p>
+      </details>
+      <details>
+        <summary>How long do we have the space?</summary>
+        <p>Private events include 2.5 hours of party time. Want longer? We can do that, but extra time may come with additional costs or a higher minimum. After 10PM on Thursdays, Fridays and Saturdays, extending your table means adding bottle service.</p>
+      </details>
+      <details>
+        <summary>Is there a bottle service requirement?</summary>
+        <p>After 10PM on Thursday, Friday and Saturday, there's a minimum of $450 in bottle service (hard liquor or champagne) for every 4–5 guests. Bottle service includes mixers, juices, sodas and ice, plus sparklers if you want them.</p>
+      </details>
+      <details>
+        <summary>When do the shows happen?</summary>
+        <p>Show days vary, but performances typically take place on Friday and Saturday nights, starting after 9PM.</p>
+      </details>
+      <details>
+        <summary>When do I need to lock in my guest count?</summary>
+        <p>Three business days before the event. If the count goes up, we'll adjust where space allows. If it drops, you're still responsible for the confirmed number.</p>
+      </details>
+      <details>
+        <summary>Can we split the check?</summary>
+        <p>Large groups are on a single check, but you can use multiple cards to pay it.</p>
+      </details>
+      <details>
+        <summary>Can I bring a cake, alcohol or my own playlist?</summary>
+        <p>No outside cakes, alcohol or playlists. Our prix fixe menus include dessert, and we're happy to add a candle for a birthday. Music is part of the Mayami experience.</p>
+      </details>
+      <details>
+        <summary>Are minors allowed?</summary>
+        <p>Yes, with limits. The latest reservation that includes minors is 7:30PM, and minors may stay until 10:30PM, even with a parent or guardian. Highchairs are available at no charge. There's no kids' menu, but several dishes work well for children.</p>
+      </details>
+      <details>
+        <summary>Is there a dress code?</summary>
+        <p>Business casual, and it's enforced. No beachwear, ripped clothing, beach-style sandals, overly casual or transparent outfits. Gentlemen: no tank tops, hats, athletic wear or hoodies. Worth mentioning in your invite.</p>
+      </details>
+      <details>
+        <summary>Parking, access and entrances?</summary>
+        <p>Valet is $30 per vehicle, and you can cover it for your guests. The main entrance is at 127 NW 23rd St, with a second entrance at 130 NW 24th St. The venue is fully ADA compliant. Just tell your coordinator if any guests need assistance.</p>
+      </details>
+      <details>
+        <summary>Is the Terrace private?</summary>
+        <p>No. You get your own section, but you share the Terrace (and the energy) with the rest of the room. For a fully private space, choose the Patio Tree, Upper VIP Area, Inside, or a buyout.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════ INQUIRY ═══════════════════════════ -->
+<section class="sec sec--inq" id="inquire" aria-labelledby="inq-h">
+  <div class="wrap inq">
+    <div class="inq__intro reveal">
+      <p class="eyebrow">Hold your date</p>
+      <h2 id="inq-h">Let's put it <em>on the calendar.</em></h2>
+      <p>Built a quote above? It's already in the form — just add your details. Or start fresh.</p>
+      <ul class="ticks">
+        <li>A complete proposal within <span data-promise="responseTime">2 hours</span></li>
+        <li>One named captain from here to the last song</li>
+        <li>No obligation. Just options.</li>
+      </ul>
+      <figure class="inq__img"><img loading="lazy" src="/images/outdoor-800.webp" alt="Looking down on the Outdoor Area set for dinner" width="800" height="533" /></figure>
+      <p class="inq__direct">Rather talk now? <a data-venue="phone" href="tel:+17866601341">(786) 660-1341</a></p>
+    </div>
+
+    <div class="reveal">
+      <form class="form" id="inqForm" name="mayami-event-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="mayami-event-inquiry" />
+        <input type="hidden" name="quote_summary" id="fQuote" />
+        <input type="hidden" name="quote_total" id="fTotal" />
+        <p hidden><label>Leave this empty <input name="bot-field" /></label></p>
+
+        <div class="form__summary" id="fSummary" hidden></div>
+
+        <div class="row">
+          <div class="field"><label for="fName">Full name</label><input id="fName" name="name" autocomplete="name" required /><p class="field__err">Please add your name.</p></div>
+          <div class="field"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" required /><p class="field__err">Please add a valid email.</p></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="fPhone">Phone</label><input id="fPhone" name="phone" type="tel" autocomplete="tel" required /><p class="field__err">We'll text your proposal — please add a phone.</p></div>
+          <div class="field"><label for="fCompany">Company <span class="opt">(optional)</span></label><input id="fCompany" name="company" autocomplete="organization" /></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="fDate">Preferred date</label><input id="fDate" name="event_date" type="date" /></div>
+          <div class="field"><label for="fGuests">Guests</label><input id="fGuests" name="guests" type="number" min="1" inputmode="numeric" required /><p class="field__err">How many guests?</p></div>
+        </div>
+        <div class="row">
+          <div class="field"><label for="fOcc">Occasion</label><select id="fOcc" name="occasion"><option value="">Select…</option></select></div>
+          <div class="field"><label for="fSpace">Preferred space</label><select id="fSpace" name="space"><option value="">Not sure yet</option></select></div>
+        </div>
+        <div class="field"><label for="fDiet">Dietary needs <span class="opt">(optional)</span></label><input id="fDiet" name="dietary" placeholder="e.g. 3 vegan, 1 nut allergy" /></div>
+        <div class="field"><label for="fMsg">Anything else?</label><textarea id="fMsg" name="message" rows="4" placeholder="What are you celebrating? Any must-haves?"></textarea></div>
+
+        <button type="submit" class="btn btn--block" id="fSubmit">Send — hold my date</button>
+        <p class="form__fail" id="fFail" role="alert" hidden>That didn't go through. Please call <a href="tel:+17866601341">(786) 660-1341</a> or email <a href="mailto:info@mayamiwynwood.com">info@mayamiwynwood.com</a>.</p>
+      </form>
+
+      <div class="form__ok" id="formOk" hidden tabindex="-1">
+        <div class="form__ok-mark" aria-hidden="true">✓</div>
+        <h3>Your request is in.</h3>
+        <p>Your events captain will send a complete proposal within <span data-promise="responseTime">2 hours</span> during business hours. Keep an eye on your email and texts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <img class="foot__logo" src="/images/logo.png" alt="Mayami Wynwood" width="520" height="326" loading="lazy" />
+  <p class="foot__addr">127 NW 23rd St · Wynwood, Miami, FL 33127 · <a href="tel:+17866601341">(786) 660-1341</a> · <a href="mailto:info@mayamiwynwood.com">info@mayamiwynwood.com</a></p>
+  <p class="foot__hours">Dinner Mon–Sun 5PM–3AM · Brunch Sat–Sun 12PM–6PM</p>
+  <p class="foot__links"><a href="https://www.mayamiwynwood.com" target="_blank" rel="noopener">mayamiwynwood.com</a> · <a href="https://www.mayamiwynwood.com/menu2" target="_blank" rel="noopener">Menu</a> · <a href="https://www.mayamiwynwood.com/weekly-lineup" target="_blank" rel="noopener">Weekly lineup</a> · <a href="https://www.instagram.com/mayamiwynwood/" target="_blank" rel="noopener">Instagram</a></p>
+</footer>
+
+<div class="sticky" id="sticky"><a href="#quote" class="btn">Get my all-in quote</a></div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
