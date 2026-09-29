@@ -5,17 +5,24 @@ Landing page for private events and group bookings at [Mayami Wynwood](https://w
 
 ## What's on the page
 
+The page is built to be low-effort for the planner: prices first, then four picks and a total.
+
 | Section | SOP principle it serves |
 |---|---|
 | Urgency ribbon (live weeks-to-December count) | Sell in the month they decide, not the month they party |
-| **All-in instant quote** — occasion, headcount, seated/cocktail, night, menu, bar, extras | "Inquire for pricing" is a dead end. Show the real number with service and tax included |
-| Spaces that light up as the quote changes | Everything on the page: capacity, what each space is booked for |
-| Menus with real courses and prices | A short, confident menu of packages |
-| Buyouts: hors d'oeuvres and open-bar pricing | Clear tiers, no custom-quote puzzle |
-| The night, scripted (arrival → table → show → bottle parade) | Engineer the moments that drive rebooking |
-| Promises to planners | Booker's Bill of Rights |
+| **Pricing, up front** — every menu, buyout extra, fee and rule | "Inquire for pricing" is a dead end |
+| **Book** — calendar → start time → guests → menu, with a live all-in total and contact fields in one panel | The fastest clear answer wins. One form, one job |
+| Spaces (matched to guest count automatically) | Everything on the page |
+| Menus with every course | A short, confident menu of packages |
+| The night + press | Engineer the moments that drive rebooking |
 | FAQ from the client's own policies | Answer objections before they're emailed |
-| Inquiry form, pre-filled from the quote | One point of conversion |
+
+The booking panel works out the details itself: the **space** comes from the guest count (smallest space that
+seats the group), **brunch** times appear on Saturday and Sunday and lock the menu to Brunch, **open bars and hors
+d'oeuvres** appear once the group needs a buyout, and the **bottle minimum** is added when a Thursday–Saturday
+party runs past 10PM.
+
+The calendar collects a *requested* date. There's no live availability feed, so the captain confirms it.
 
 ## Editing content
 
@@ -52,8 +59,8 @@ npm run dev
 ```
 
 Deploys as a static site on Netlify (`netlify.toml`). The inquiry form uses **Netlify Forms** (form name
-`mayami-event-inquiry`). After the first deploy, turn on form notifications in Netlify so each lead is emailed to the
+`mayami-event-booking`). After the first deploy, turn on form notifications in Netlify so each lead is emailed to the
 events lead the moment it arrives. The 2-hour promise depends on it.
 
-**Tracking:** paste the Meta Pixel and GA4 base codes into `<head>`. The page already fires `InitiateCheckout` when a quote
-is carried to the form, and `Lead` (with the quote value) on submit.
+**Tracking:** paste the Meta Pixel and GA4 base codes into `<head>`. The page already fires `InitiateCheckout` when a date
+is picked, and `Lead` (with the quote value) on submit.

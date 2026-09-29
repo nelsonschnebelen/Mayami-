@@ -1,5 +1,5 @@
 # Static Vite build. The inquiry form is captured by Netlify Forms
-# (form name: mayami-event-inquiry) — no backend needed.
+# (form name: mayami-event-booking) — no backend needed.
 [build]
   command = "npm run build"
   publish = "dist"

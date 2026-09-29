@@ -46,11 +46,16 @@ export const OCCASIONS = {
   other:        'Something else',
 };
 
-export const NIGHTS = {
-  early: { label: 'Sun–Wed' },
-  thu:   { label: 'Thursday', bottles: true },
-  wkd:   { label: 'Fri–Sat', bottles: true, show: true },
+// Start times the booking calendar offers. Dinner runs nightly from 5PM;
+// brunch Sat–Sun 12–6PM, so the last brunch start leaves room for 2.5 hours.
+export const TIMES = {
+  brunch: ['12:00', '12:30', '13:00', '13:30', '14:00', '14:30', '15:00', '15:30'],
+  dinner: ['17:00', '17:30', '18:00', '18:30', '19:00', '19:30', '20:00', '20:30', '21:00', '21:30', '22:00'],
 };
+export const BRUNCH_DAYS = [0, 6];        // Sun, Sat
+export const BOTTLE_DAYS = [4, 5, 6];     // Thu, Fri, Sat
+export const BOTTLE_AFTER = 22;           // 10PM
+export const SHOW_DAYS = [5, 6];          // Fri, Sat — shows after 9PM
 
 // `buyout`: partial/full buyouts unlock the hors d'oeuvres and open-bar packages.
 export const SPACES = [
